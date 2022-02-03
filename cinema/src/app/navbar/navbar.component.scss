@@ -1,0 +1,18 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+// some basic resets 
+
+body { 
+  padding: 0; 
+  margin: 0; 
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
