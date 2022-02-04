@@ -8,6 +8,10 @@ import { Input, Output, EventEmitter } from '@angular/core';
 export class LoginComponent implements OnInit {
   email: string;
   password: string;
+  errorMessage = 'Invalid Credentials';
+  successMessage: string;
+  invalidLogin = false;
+  loginSuccess = false;
 
   constructor() { }
 
