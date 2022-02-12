@@ -1,1 +1,63 @@
-<p>profile works!</p>
+<div class="container">
+    <div class="row">
+    <div class="card col-md-8 offset-md-2">
+        <div class="col-8 offset-2 pt-2">
+            <h1>Profile Information</h1>
+        </div>
+        <div class="col-12 col-md-8 col-lg-8 offset-md-2 pt-4">
+            <table class="table table-user-information">
+              <tbody>
+                <tr>
+                  <td>Name:</td>
+                  <td *ngIf="!inputsEnabled">{{userInfo.name}}</td>
+                  <td *ngIf="inputsEnabled">
+                      <input type="text" matInput value="{{userInfo.name}}">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Username:</td>
+                  <td *ngIf="!inputsEnabled">{{userInfo.username}}</td>
+                  <td *ngIf="inputsEnabled">
+                    <input type="text" matInput value="{{userInfo.username}}">
+                  </td>
+                </tr>
+                <tr>
+                  <td>Surname:</td>
+                  <td *ngIf="!inputsEnabled">{{userInfo.surname}}</td>
+                  <td *ngIf="inputsEnabled">
+                    <input type="text" matInput value="{{userInfo.surname}}">
+                  </td>
+                </tr>
+                <tr>
+                  <tr>
+                    <td>Email:</td>
+                    <td *ngIf="!inputsEnabled">{{userInfo.email}}</td>
+                    <td *ngIf="inputsEnabled">
+                        <input type="text" matInput value="{{userInfo.email}}">
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Password:</td>
+                    <td *ngIf="!inputsEnabled">*******</td>
+                    <td *ngIf="inputsEnabled">
+                        <input type="text" matInput>
+                    </td>
+                  </tr>
+                  
+               
+              </tbody>
+            </table>
+          </div>
+        <div class="col-6 offset-6" *ngIf="!inputsEnabled">
+            <button class="col-12 my-2" mat-raised-button color="basic" (click)="enableInputs()">Change Info</button>
+            
+        </div>
+        <div class="col-6 offset-6" *ngIf="inputsEnabled" fxLayoutGap="10px">
+            <button class="col-5 my-2" mat-raised-button color="warn" (click)="enableInputs()">Cancel</button>
+            <button class="col-5 my-2" mat-raised-button color="primary" (click)="updateUserInfo()">Update Info</button>
+        </div>
+    </div>
+</div>
+    
+</div>
+

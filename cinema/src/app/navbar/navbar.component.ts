@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,9 @@ export class NavbarComponent implements OnInit {
   isLoggedIn: boolean;
   username: string;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, 
+              private router: Router,
+              private toastr: ToastrService) {}
 
   ngOnInit(): void {
     this.authService.loggedIn.subscribe((data: boolean) => this.isLoggedIn = data);
@@ -32,6 +35,7 @@ export class NavbarComponent implements OnInit {
     this.authService.logout();
     this.isLoggedIn = false;
     this.router.navigateByUrl('');
+    this.toastr.success('Logout Successful');
   }
 
 }

@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
               private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.registerSuccessMessage="";
     this.activatedRoute.queryParams
       .subscribe(params => {
         if (params["registered"] !== undefined && params["registered"] === 'true') {

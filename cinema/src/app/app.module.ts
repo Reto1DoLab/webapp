@@ -23,6 +23,8 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
 import { ProfileComponent } from './profile/profile.component';
+import { CreateCinemaComponent } from './create-cinema/create-cinema.component';
+import { CreateOfferComponent } from './create-offer/create-offer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { ProfileComponent } from './profile/profile.component';
     RegisterComponent,
     HomeComponent,
     NavbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    CreateCinemaComponent,
+    CreateOfferComponent
   ],
   imports: [
     BrowserModule,

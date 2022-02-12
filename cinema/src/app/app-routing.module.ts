@@ -5,7 +5,9 @@ import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from "./register/register.component";
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminGuard } from './guards/admin.guard';
+import { CinemaGuard } from './guards/cinema.guard';
 
 const routes: Routes = [
   { path: "", component: HomeComponent, pathMatch: "full" },

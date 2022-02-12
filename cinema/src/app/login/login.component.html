@@ -3,7 +3,7 @@
     <mat-card-title class="row">
       <h1 class="col-8 offset">Log in</h1>
     </mat-card-title>
-    <mat-card-content >
+    <mat-card-content>
       <form class="example-form row" method="post">
         <div class="fields col-12 py-2" fxLayoutGap="10px">
           <mat-form-field class="col-8" appearance="fill">
@@ -32,16 +32,31 @@
         </div>
 
         <div class="row py-2 align-items-end">
-          
           <a class="col-7 offset-5"
-            ><button class="col-12" mat-raised-button type="submit" (click)="login()">
+            ><button
+              class="col-12"
+              mat-raised-button
+              type="submit"
+              (click)="login()"
+            >
               Log in
             </button></a
-          ><a routerLink="/register" class="col-8 align-self-end pt-2 offset-4">Not have an account? Register here</a>
+          ><a routerLink="/register" class="col-8 align-self-end pt-2 offset-4"
+            >Not have an account? Register here</a
+          >
         </div>
-        <div class="login-failed" *ngIf='this.isError'>
-          <p class="login-failed-text">Login Failed. Please check your credentials and try again.</p>   
-     </div>
+        <div class="login-failed" *ngIf="this.isError">
+          <p class="login-failed-text">
+            Login Failed. Please check your credentials and try again.
+          </p>
+        </div>
+        <div
+          class="login-failed"
+          [ngStyle]="{ 'background-color': 'green' }"
+          *ngIf="this.registerSuccessMessage.length > 0"
+        >
+          <p class="register-success-text">{{ registerSuccessMessage }}</p>
+        </div>
       </form>
     </mat-card-content>
   </mat-card>
