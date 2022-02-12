@@ -10,10 +10,10 @@
             <mat-label>Email</mat-label>
             <input
               matInput
-              placeholder="pepito@gmail.com"
-              type="email"
-              [(ngModel)]="email"
-              name="email"
+              placeholder=""
+              type="username"
+              [(ngModel)]="username"
+              name="username"
               required="required"
               autocomplete="on"
             />
@@ -39,6 +39,9 @@
             </button></a
           ><a routerLink="/register" class="col-8 align-self-end pt-2 offset-4">Not have an account? Register here</a>
         </div>
+        <div class="login-failed" *ngIf='this.isError'>
+          <p class="login-failed-text">Login Failed. Please check your credentials and try again.</p>   
+     </div>
       </form>
     </mat-card-content>
   </mat-card>

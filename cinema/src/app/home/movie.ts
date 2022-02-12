@@ -3,5 +3,8 @@ export interface Movie {
     name: string;
     year: number;
     imageURL: string;
-    cinema: string;
+    description: string;
+    directors: string[];
+    categorys: string[];
+    actors: string[];
 }

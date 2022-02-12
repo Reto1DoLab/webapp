@@ -6,7 +6,34 @@
     <mat-card-content>
       <form class="example-form row" method="post">
         <div class="fields col-12 py-2" fxLayoutGap="10px">
-          <mat-form-field class="col-8" appearance="fill">
+          <mat-form-field class="col-4" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              [(ngModel)]="name"
+              name="name"
+              required="required"
+            />
+          </mat-form-field>
+          <mat-form-field class="col-4" appearance="fill">
+            <mat-label>Surname</mat-label>
+            <input
+              matInput
+              [(ngModel)]="surname"
+              name="surname"
+              required="required"
+            />
+          </mat-form-field>
+          <mat-form-field class="col-4" appearance="fill">
+            <mat-label>Username</mat-label>
+            <input
+              matInput
+              [(ngModel)]="username"
+              name="username"
+              required="required"
+            />
+          </mat-form-field>
+          <mat-form-field class="col-4" appearance="fill">
             <mat-label>Email</mat-label>
             <input
               matInput
@@ -17,7 +44,7 @@
               required="required"
             />
           </mat-form-field>
-          <mat-form-field class="col-8" appearance="fill">
+          <mat-form-field class="col-4" appearance="fill">
             <mat-label>Password</mat-label>
             <input
               matInput
@@ -28,7 +55,7 @@
               autocomplete="on"
             />
           </mat-form-field>
-          <mat-form-field class="col-8" appearance="fill">
+          <mat-form-field class="col-4" appearance="fill">
             <mat-label>Confirm Password</mat-label>
             <input
               matInput

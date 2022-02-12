@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: "https://rickandmortyapi.com/api/episode/10,28",
+  apiBaseUrl: "http://localhost:8090/api",
 };
 
 /*
