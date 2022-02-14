@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container ">
     <div class="row">
-    <div class="card col-md-8 offset-md-2">
+    <div class="card col-md-8 offset-md-2 mat-elevation-z5">
         <div class="col-8 offset-2 pt-2">
             <h1>Profile Information</h1>
         </div>
@@ -11,21 +11,24 @@
                   <td>Name:</td>
                   <td *ngIf="!inputsEnabled">{{userInfo.name}}</td>
                   <td *ngIf="inputsEnabled">
-                      <input type="text" matInput value="{{userInfo.name}}">
+                      <input type="text" matInput value="{{userInfo.name}}"
+                      [(ngModel)]="userInfo.name"/>
                   </td>
                 </tr>
                 <tr>
                   <td>Username:</td>
                   <td *ngIf="!inputsEnabled">{{userInfo.username}}</td>
                   <td *ngIf="inputsEnabled">
-                    <input type="text" matInput value="{{userInfo.username}}">
+                    <input type="text" matInput value="{{userInfo.username}}"
+                    [(ngModel)]="userInfo.username">
                   </td>
                 </tr>
                 <tr>
                   <td>Surname:</td>
                   <td *ngIf="!inputsEnabled">{{userInfo.surname}}</td>
                   <td *ngIf="inputsEnabled">
-                    <input type="text" matInput value="{{userInfo.surname}}">
+                    <input type="text" matInput value="{{userInfo.surname}}"
+                    [(ngModel)]="userInfo.surname">
                   </td>
                 </tr>
                 <tr>
@@ -33,14 +36,15 @@
                     <td>Email:</td>
                     <td *ngIf="!inputsEnabled">{{userInfo.email}}</td>
                     <td *ngIf="inputsEnabled">
-                        <input type="text" matInput value="{{userInfo.email}}">
+                        <input type="text" matInput value="{{userInfo.email}}"
+                        [(ngModel)]="userInfo.email">
                       </td>
                   </tr>
                   <tr>
                     <td>Password:</td>
                     <td *ngIf="!inputsEnabled">*******</td>
                     <td *ngIf="inputsEnabled">
-                        <input type="text" matInput>
+                        <input type="password" [(ngModel)]="userInfo.password" matInput>
                     </td>
                   </tr>
                   
@@ -53,7 +57,7 @@
             
         </div>
         <div class="col-6 offset-6" *ngIf="inputsEnabled" fxLayoutGap="10px">
-            <button class="col-5 my-2" mat-raised-button color="warn" (click)="enableInputs()">Cancel</button>
+            <button class="col-5 my-2" mat-raised-button color="warn" (click)="cancel()">Cancel</button>
             <button class="col-5 my-2" mat-raised-button color="primary" (click)="updateUserInfo()">Update Info</button>
         </div>
     </div>

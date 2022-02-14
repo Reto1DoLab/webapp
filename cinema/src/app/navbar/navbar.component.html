@@ -1,23 +1,38 @@
 <mat-toolbar color="primary">
     <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end">
         <a routerLink="/">
-            <h2>
-                Cinemas Do Lab
+            <div class="row">
+            <mat-icon class="col-2 align-middle">movie</mat-icon>
+            <h2 class="col-2">
+                Cinemas DoLab
             </h2>
+            </div>
         </a>
         
         
     </div>
     <div class="example-spacer"></div>
+    
     <div *ngIf="isLoggedIn" ngbDropdown class="float-right">
         <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            
+            <div *ngIf="isAdmin">
+                <button (click)="goToCreateCinema()" ngbDropdownItem>Create Cinema</button>
+                <button (click)="goToCreateMovie()" ngbDropdownItem>Create Movie</button>
+            </div>
+            <div *ngIf="isCinema">
+                <button (click)="goToCreateOffer()" ngbDropdownItem>Create Offer</button>
+            </div>
             <button (click)="goToUserProfile()" ngbDropdownItem>Profile</button>
             <button (click)="logout()" ngbDropdownItem>Logout</button>
         </div>
-        <button mat-button id="dropdownBasic1" ngbDropdownToggle>
-            {{username}}
+        <button mat-button id="dropdownBasic1" class="col-12" ngbDropdownToggle>
+        
+                <mat-icon>account_circle</mat-icon>
+            
         </button>
-    </div> 
+    </div>
+    
     <div fxLayout="row" fxLayoutGap="10px" *ngIf="!isLoggedIn">
         <div fxLayoutGap="10px">
             <a routerLink="/login"><button mat-raised-button color="basic" >Login</button></a>

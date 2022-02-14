@@ -14,7 +14,7 @@ export class CinemaGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    const isAuthenticated = this.authService.isLoggedIn();//isCinema()
+    const isAuthenticated = this.authService.isLoggedIn() && this.authService.isCinema;//isCinema()
     if (isAuthenticated) {
       return true;
     } else {

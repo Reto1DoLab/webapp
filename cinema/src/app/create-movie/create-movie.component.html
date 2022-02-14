@@ -1,11 +1,20 @@
 <div class="container">
     <mat-card class="col-10 card offset-1 mat-elevation-z5">
       <mat-card-title class="row">
-          <h1 class="col-8 offset">Create Offer</h1>
+          <h1 class="col-8 offset">Create Movie</h1>
       </mat-card-title>
       <mat-card-content>
         <form class="example-form row" method="post">
           <div class="fields col-12 py-2" fxLayoutGap="10px">
+            <mat-form-field class="col-5" appearance="fill">
+              <mat-label>Title</mat-label>
+              <input
+                matInput
+                [(ngModel)]="title"
+                name="title"
+                required="required"
+              />
+            </mat-form-field>
             <mat-form-field class="col-12" appearance="fill">
                 <mat-label>Description</mat-label>
                 <input
@@ -15,12 +24,12 @@
                   required="required"
                 >
               </mat-form-field>
-              <mat-form-field class="col-8" appearance="fill">
-                <mat-label>Deadline</mat-label>
+              <mat-form-field class="col-6" appearance="fill">
+                <mat-label>Date</mat-label>
                 <input
                   matInput
-                  [(ngModel)]="deadline"
-                  name="deadline"
+                  [(ngModel)]="date"
+                  name="description"
                   required="required"
                   [matDatepicker]="picker"
                 >
@@ -28,20 +37,11 @@
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field>
               <mat-form-field class="col-5" appearance="fill">
-                <mat-label>addPoints</mat-label>
+                <mat-label>Image Url</mat-label>
                 <input
                   matInput
-                  [(ngModel)]="addPoints"
-                  name="addPoints"
-                  required="required"
-                >
-              </mat-form-field>
-              <mat-form-field class="col-5" appearance="fill">
-                <mat-label>subPoints</mat-label>
-                <input
-                  matInput
-                  [(ngModel)]="subPoints"
-                  name="subPoints"
+                  [(ngModel)]="urlImage"
+                  name="description"
                   required="required"
                 >
               </mat-form-field>
@@ -50,8 +50,9 @@
   
           <div class="row py-2 align-items-end">
             <a class="col-7 offset-5"
-              ><button class="col-12" mat-raised-button type="submit" (click)="createOffer()">
-                Create Offer
+              ><button class="col-12" mat-raised-button type="submit" (click)="createMovie()"
+              color="primary">
+                Create Movie
               </button></a
             >
           </div>

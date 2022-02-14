@@ -1,1 +1,105 @@
-<p>create-cinema works!</p>
+<div class="container">
+    <mat-card class="col-10 card offset-1">
+      <mat-card-title class="row">
+          <h1 class="col-8 offset">Create Cinema</h1>
+      </mat-card-title>
+      <mat-card-content>
+        <form class="example-form row" method="post">
+          <div class="fields col-12 py-2" fxLayoutGap="10px">
+            <mat-form-field class="col-5" appearance="fill">
+              <mat-label>Name</mat-label>
+              <input
+                matInput
+                [(ngModel)]="name"
+                name="name"
+                required="required"
+              />
+            </mat-form-field>
+            <mat-form-field class="col-5" appearance="fill">
+              <mat-label>Surname</mat-label>
+              <input
+                matInput
+                [(ngModel)]="surname"
+                name="surname"
+                required="required"
+              />
+            </mat-form-field>
+            <mat-form-field class="col-5" appearance="fill">
+              <mat-label>Username</mat-label>
+              <input
+                matInput
+                [(ngModel)]="username"
+                name="username"
+                required="required"
+              />
+            </mat-form-field>
+            <mat-form-field class="col-5" appearance="fill">
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                placeholder="pepito@gmail.com"
+                type="email"
+                [(ngModel)]="email"
+                name="email"
+                required="required"
+              />
+            </mat-form-field>
+            <mat-form-field class="col-5" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                type="password"
+                [(ngModel)]="password"
+                name="password"
+                required="required"
+                autocomplete="on"
+              />
+            </mat-form-field>
+            <mat-form-field class="col-5" appearance="fill">
+              <mat-label>Confirm Password</mat-label>
+              <input
+                matInput
+                type="password"
+                [(ngModel)]="confirmPassword"
+                name="confirm_password"
+                required="required"
+                autocomplete="on"
+              />
+            </mat-form-field>
+              <mat-form-field class="col-5" appearance="fill">
+                <mat-label>Web</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  [(ngModel)]="web"
+                  name="web"
+                  required="required"
+                  autocomplete="on"
+                />
+              </mat-form-field>
+              <mat-form-field class="col-5" appearance="fill">
+                <mat-label>Address</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  [(ngModel)]="address"
+                  name="address"
+                  required="required"
+                  autocomplete="on"
+                />
+              </mat-form-field>
+          </div>
+  
+          <div class="row py-2 align-items-end">
+            <a class="col-7 offset-5"
+              ><button class="col-12" mat-raised-button type="submit" (click)="createCinema()"
+              color="primary">
+                Create Cinema
+              </button></a
+            >
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

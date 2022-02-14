@@ -1,4 +1,37 @@
+/*DEMO ONLY*/
+.service-categories{
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background: #3d6277;
+    background-size: cover;
+  }
+  /*DEMO ONLY*/
+  .service-categories .card{
+    transition: all 0.2s;
+  }
+  .service-categories .card-title{
+    padding-top: 0.5em;
+  }
+  .service-categories a:hover{
+    text-decoration: none;
+  }
+  .service-card{
+    background: rgba(72, 88, 104, 0.9);
+    border: 0;
+  }
+  .service-card:hover{
+    background: rgba(72, 88, 104, 1);
+    border-right: 5px solid orange;
+    border-left: 5px solid orange;
+  }
+  .fa{
+    color: white;
+  }
+  .icon-display {
+    transform: scale(2.5);
+ }
 
+ 
 body {
     font-family: 'Roboto', sans-serif;
     font-style: normal;

@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +26,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { ProfileComponent } from './profile/profile.component';
 import { CreateCinemaComponent } from './create-cinema/create-cinema.component';
 import { CreateOfferComponent } from './create-offer/create-offer.component';
+import { CreateMovieComponent } from './create-movie/create-movie.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon'
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { OffersComponent } from './offers/offers.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +40,9 @@ import { CreateOfferComponent } from './create-offer/create-offer.component';
     NavbarComponent,
     ProfileComponent,
     CreateCinemaComponent,
-    CreateOfferComponent
+    CreateOfferComponent,
+    CreateMovieComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,
@@ -43,15 +51,19 @@ import { CreateOfferComponent } from './create-offer/create-offer.component';
     MatToolbarModule,
     FlexLayoutModule,
     MatButtonModule,
+    MatNativeDateModule,
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDatepickerModule,
     MatCardModule,
     FormsModule,
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     NgbModule,
     ToastrModule.forRoot(),
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [
     AuthService,
