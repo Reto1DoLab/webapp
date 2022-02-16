@@ -5,6 +5,7 @@ import { UserInfo } from './userInfo';
 import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { UserInfoUpdateBody } from './user.profile.update.body';
 import { ToastrService } from 'ngx-toastr';
+import { UserInfoDeleteBody } from './user.profile.delete.body';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -17,7 +18,8 @@ export class ProfileComponent implements OnInit {
   inputsEnabled: boolean;
   constructor(private activatedRoute: ActivatedRoute,
               private authService: AuthService,
-              private toastrService: ToastrService) {
+              private toastrService: ToastrService,
+              ) {
     this.userInfo = {
       name: "",
       surname: "",
@@ -78,4 +80,25 @@ export class ProfileComponent implements OnInit {
     );
   }
 
+
+  deleteUser(){
+    let body : UserInfoDeleteBody ={
+      username: this.userInfo.username,
+    };
+    this.authService.deleteUserInfo(body).subscribe(
+      data => {
+        console.log(data)
+        this.toastrService.success('Deleted user info successfully');
+        this.enableInputs();
+
+      },
+      (err:HttpErrorResponse) => {
+        this.toastrService.error('User delete failed!');
+        console.log(err);
+      }
+    )
+  }
+
 }
+
+

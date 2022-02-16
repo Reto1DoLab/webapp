@@ -56,8 +56,8 @@ export class HomeComponent implements OnInit {
       {
         title: "The Suicide Squad",
         date: new Date(2021),
-        urlImage: "https://cloudfront-us-east-1.images.arcpublishing.com/copesa/5NVN6IJQGVF4RIPHO63NCEMTA4.jpeg",
         description: "Con tal de salir de una prisión infernal, los supervillanos más peligrosos del mundo aceptan una misión del Gobierno: viajar a una remota isla, enemiga de los Estados Unidos y repleta de soldados, para destruir un laboratorio de alta tecnología.",
+        urlImage: "https://cloudfront-us-east-1.images.arcpublishing.com/copesa/5NVN6IJQGVF4RIPHO63NCEMTA4.jpeg",
 
       }
     ];

@@ -10,6 +10,7 @@ import { LoginResponse } from '../login/login.response';
 import { UserInfo } from '../profile/userInfo';
 import { RegisterRequestBody } from '../register/register.request';
 import { UserInfoUpdateBody } from '../profile/user.profile.update.body'
+import { UserInfoDeleteBody } from '../profile/user.profile.delete.body';
 
 @Injectable({
     providedIn: 'root'
@@ -114,6 +115,14 @@ export class AuthService {
         return this.http.post<UserInfo>(`${this.apiServerUrl}/auth/update-info`, this.updateProfileInfoBody);
 
     }
+
+    deleteUserInfo(userInfoDeleteBody:UserInfoDeleteBody) {
+        const options = {
+            body: userInfoDeleteBody
+          };
+        return this.http.delete(`${this.apiServerUrl}/auth/delete-info`, options);
+        this.logout()
+                }
 
     getJwtToken() {
         return localStorage.getItem('authenticationToken');

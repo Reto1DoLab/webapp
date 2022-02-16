@@ -52,9 +52,9 @@
               </tbody>
             </table>
           </div>
-        <div class="col-6 offset-6" *ngIf="!inputsEnabled">
-            <button class="col-12 my-2" mat-raised-button color="basic" (click)="enableInputs()">Change Info</button>
-            
+        <div class="col-12" *ngIf="!inputsEnabled">
+            <button class="col-4 my-2" mat-raised-button color="danger" >Delete User</button>
+            <button class="col-4 my-2" mat-raised-button color="basic" (click)="enableInputs()">Change Info</button>
         </div>
         <div class="col-6 offset-6" *ngIf="inputsEnabled" fxLayoutGap="10px">
             <button class="col-5 my-2" mat-raised-button color="warn" (click)="cancel()">Cancel</button>
